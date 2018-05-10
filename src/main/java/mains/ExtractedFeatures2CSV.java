@@ -21,9 +21,10 @@ public class ExtractedFeatures2CSV
 		GroundTruth groundTruth = new GroundTruth();
 		groundTruth.readFromFile(pathToGroundTruth);
 		
+		int maxPagesPerVolume = 30;
 		HTRCExtractedFeatures ef = new HTRCExtractedFeatures();
 		ef.setGroundTruth(groundTruth);
-		
+		ef.setPagesPerVolume(maxPagesPerVolume);
 		
 		String[] varNames = {
 				"volume",
