@@ -56,7 +56,7 @@ public class ExtractedFeatures2CSV
 		while(in.hasNextLine())
 		{
 			String pathToZippedJson = in.nextLine();
-			ef.readFromFile(pathToZippedJson);
+			ef.json2variables(pathToZippedJson);
 		}
 		in.close();
 	}

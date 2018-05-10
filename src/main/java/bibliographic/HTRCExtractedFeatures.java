@@ -20,7 +20,20 @@ public class HTRCExtractedFeatures
 	private GroundTruth groundTruth;
 	private int maxPagesPerVolume = 30;
 
-	public void readFromFile(String pathToZippedJson)
+	/**
+	 * Sets the maximum number of pages that we'll analyze per volume.
+	 * @param pagesPerVolume upper limit on the number of pages we'll create data for
+	 */
+	public void setPagesPerVolume(int pagesPerVolume)
+	{
+		this.maxPagesPerVolume = pagesPerVolume;
+	}
+	
+	/**
+	 * Reads, deserializes, and extracts relevant variables from a bzipped HT extracted features file
+	 * @param pathToZippedJson /path/to/a/viable/ht/ef.json.bzip2
+	 */
+	public void json2variables(String pathToZippedJson)
 	{
 		Volume volume = null;
 
